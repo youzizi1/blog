@@ -7,7 +7,7 @@ url: http://www.forsigner.com
 avatar: /images/avatar.jpg
 
 # Set favicon
-favicon: /favicon.ico
+favicon: /images/favicon.ico
 
 # For seo
 keywords: 前端开发,大前端,JavaScript,Python,Go,Node.js,Vue,React,Koa,Express
