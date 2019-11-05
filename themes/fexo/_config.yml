@@ -143,9 +143,9 @@ changyan:
 # gitalk评论组件，把下面的配置换成你的，官方文档: https://gitalk.github.io/
 gitalk:
   enable: true # 如果使用 gitalk，请设置改之为true
-  clientID: 0270f3227c6653647f7f
-  clientSecret: c8d6ecab17c505e03f7cb3662b0e6ca2766f2c44
-  repo: blog-comment
+  clientID: 0cd23477ea3857ba6649
+  clientSecret: 21fddf7b7f8eca128bf3c0182f7cb81bc617b99f
+  repo: blog-comments
   owner: youzizi1
   admin: youzizi1
 
