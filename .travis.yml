@@ -1,10 +1,13 @@
 language: node_js
 
-node_js: stable # 要安装的node版本为当前的稳定版
+node_js: stable
 
 cache:
   directories:
-    - node_modules # 要缓存的文件夹
+    - node_modules
+
+before_install:
+  - npm install -g hexo-cli
 
 install:
   - npm install
