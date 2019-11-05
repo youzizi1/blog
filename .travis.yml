@@ -23,7 +23,7 @@ after_script: # 最后执行的命令
   - git config user.email "yinyun957@gmail.com"
   - git add .
   - git commit -m "自动部署"
-  - git push --force --quiet "https://${blog_token}@${GH_REF}" master:gh-pages
+  - git push --force --quiet "https://${blog_token}@${BLOG_REF}" master:master
 
 branches:
   only:
@@ -31,4 +31,5 @@ branches:
 
 env:
   global:
-    - GH_REF: github.com/youzizi1/blog.git # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
+    # Blog Pages
+    - BLOG_REF: github.com/youzizi1/youzizi1.github.io.git
