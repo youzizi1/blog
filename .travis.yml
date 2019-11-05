@@ -1,0 +1,31 @@
+language: node_js
+
+node_js: stable # 要安装的node版本为当前的稳定版
+
+cache:
+  directories:
+    - node_modules # 要缓存的文件夹
+
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo g
+
+after_script: # 最后执行的命令
+  - cd ./public
+  - git init
+  - git config user.name "ugu"
+  - git config user.email "yinyun957@gmail.com"
+  - git add .
+  - git commit -m "自动部署"
+  - git push --force --quiet "https://${BLOG_TOKEN}@${GH_REF}" master:gh-pages
+
+branches:
+  only:
+    - master # 触发持续集成的分支
+
+env:
+  global:
+    - GH_REF: github.com/youzizi1/blog.git # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
