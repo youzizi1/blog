@@ -22,7 +22,7 @@ after_script: # 最后执行的命令
   - git config user.name "ugu"
   - git config user.email "yinyun957@gmail.com"
   - git add .
-  - git commit -m "自动部署"
+  - git commit -m "Travis CI Auto Builder :$(date '+%Y-%m-%d %H:%M:%S' -d '+8 hour')"
   - git push --force --quiet "https://${blog_token}@${BLOG_REF}" master:master
 
 branches:
