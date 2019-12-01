@@ -90,6 +90,22 @@ p.then(data => {
 })
 ```
 
+另外，`Promise`还可以用来模拟`sleep`功能。
+
+```js
+const sleep = delay => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            try {
+                resolve(1)
+            }catch(e) {
+                reject(0)
+            }
+        }, delay)
+    })
+}
+```
+
 ## Generator
 
 很多时候希望在函数执行时，能够控制内部执行的流程。
@@ -171,7 +187,11 @@ function co(generator) {
 
 ## async/await
 
-`async/await`本质上是`co`和`generator`的语法糖。
+`async/await`本质上是`co`和`generator`的语法糖，具有如下特点：
+
+* `await`后面必须跟上一个`Promise`
+* `async`函数执行返回的也是一个`Promise`
+* `await`必须嵌套在`async`函数内
 
 ```js
 const fs = require('fs')
