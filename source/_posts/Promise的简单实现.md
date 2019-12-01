@@ -1,5 +1,5 @@
 ---
-title: 基于Promise A+规范的Promise简单实现
+title: Promise的简单实现
 date: 2019-10-18 15:29:45
 tags:
   - Promise
