@@ -236,6 +236,6 @@ link:
 
 project:
   - type: personal
-    name: fexo
-    url: https://github.com/forsigner/fexo
-    intro: A minimalist design theme for hexo
+    name: 片段
+    url: http://www.codemanage.cn
+    intro: 收藏你的Code Gist
